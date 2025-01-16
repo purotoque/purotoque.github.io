@@ -1,0 +1,335 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-top: 0px;
+}
+
+header {
+    background-color: #EBE8E5;
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header img {
+    max-width: 350px;
+    display: block;
+    margin: 0 auto 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+header.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header.scrolled img {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav {
+    background-color: #c3a89e;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Relativo por defecto */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white; /* Fondo del nav para visibilidad */
+    transition: all 0.9s ease; /* Suave transición */
+}
+
+nav.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: all 0.3s ease;
+}
+
+nav ul {
+    display: flex; /* Cambia a flexbox para una distribución uniforme */
+    justify-content: center; /* Espaciado uniforme entre elementos */
+    align-items: center; /* Alineación vertical de los elementos */
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px; /* Espaciado interno uniforme */
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+/* Despegable*/
+/* Estilo básico para el contenedor del menú */
+.menu-item {
+    position: relative;
+}
+
+/* Estilo del enlace principal */
+.menu-item a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* Estilo de la lista desplegable (oculta por defecto) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    top: 100%; /* Ubicación debajo del enlace principal */
+    left: 0;
+    z-index: 1000;
+}
+
+/* Estilo de los elementos dentro del menú desplegable */
+.dropdown-menu li {
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+/* Mostrar el menú cuando el cursor está encima del elemento padre */
+.menu-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #5a3e2b;
+    margin-bottom: 20px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 16px;
+    color: #5a3e2b;
+    font-weight: bold;
+}
+
+/* Redes Sociales*/
+
+#social-media {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 2px solid #e0e0e0;
+}
+
+#social-media h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#social-media .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+#social-media .social-icons a img {
+    width: auto; /* Mantiene proporciones originales */
+    height: 40px; /* Ajusta el tamaño deseado */
+    max-width: 100%; /* Evita que supere el contenedor */
+    object-fit: contain; /* Evita distorsión */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación suave */
+}
+
+#social-media .social-icons a:hover img {
+    transform: scale(1.2); /* Aumenta tamaño al pasar el mouse */
+    opacity: 0.8;
+}
+
+/* Menú de Equipos */
+#equipos {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+#equipos h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #5a3e2b;
+    text-transform: uppercase;
+}
+
+.menu-equipos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu-equipos a {
+    text-decoration: none;
+    font-size: 16px; /* Reduce el tamaño de la fuente */
+    color: #333;
+    background-color: #fff;
+    padding: 8px 12px; /* Ajusta el tamaño del cuadro */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Asegura que el tamaño sea consistente */
+    width: auto; /* Anchura fija del cuadro */
+    text-align: center; /* Centra el texto dentro del cuadro */
+}
+
+.menu-equipos a:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+/* Sección de productos por equipo */
+.equipo {
+    scroll-margin-top: 150px; /* Ajusta este valor según la altura del menú */
+    margin-bottom: 30px;
+}
+
+.equipo h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #5a3e2b;
+    text-align: center;
+}
+
+.equipo .productos {
+    display: flex; /* Activa el diseño flexible */
+    flex-wrap: wrap; /* Permite que los elementos salten a la siguiente fila si no caben */
+    justify-content: center; /* Centra los productos horizontalmente */
+    gap: 20px; /* Espacio entre los productos */
+}
+
+.equipo .producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 200px; /* Fija el ancho de cada producto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.equipo .producto p{
+    color: #5a3e2b;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido dentro del contenedor */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 200px; /* Ancho fijo para todos los productos */
+    height: 350px; /* Altura fija para todos los productos */
+    border: 1px solid #ddd; /* Opcional: Borde para visualizar el espacio */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff; /* Fondo blanco para uniformidad */
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: contain; /* Escala las imágenes dentro del cuadro */
+    max-height: 200px; /* Limita la altura de las imágenes */
+}
+
+.producto h4 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #5a3e2b;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
