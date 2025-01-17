@@ -216,6 +216,35 @@ section h2 {
     opacity: 0.8;
 }
 
+/* Redes Sociales 2*/
+
+#social-media2 {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px 100px;
+    margin-top: 0;
+    border-top: 15px solid #f9f9f9;
+}
+
+#social-media2 .social-icons2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+#social-media2 .social-icons2 a img {
+    width: auto; /* Mantiene proporciones originales */
+    height: 40px; /* Ajusta el tamaño deseado */
+    max-width: 100%; /* Evita que supere el contenedor */
+    object-fit: contain; /* Evita distorsión */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación suave */
+}
+
+#social-media2 .social-icons2 a:hover img {
+    transform: scale(1.2); /* Aumenta tamaño al pasar el mouse */
+    opacity: 0.8;
+}
+
 /* Menú de Equipos */
 #equipos {
     background-color: #f4f4f4;
@@ -332,4 +361,86 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+#modal {
+    visibility: hidden; /* Inicialmente oculto */
+    opacity: 0; /* Invisibilidad */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+#modal.show {
+    visibility: visible; /* Visible al agregar la clase */
+    opacity: 1; /* Totalmente visible */
+}
+
+/* Imagen dentro del modal */
+.modal-content {
+    max-width: 80%; /* Limita el tamaño de la imagen */
+    max-height: 80%; /* Limita la altura de la imagen */
+    display: block;
+    margin: 0 auto; /* Centra horizontalmente */
+    animation: zoom-in 0.3s ease; /* Animación de zoom */
+}
+
+#modal img {
+    max-width: 90%; /* Ajustar tamaño máximo de la imagen */
+    max-height: 80%; /* Evitar que salga de la pantalla */
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal .close:hover {
+    color: #ccc;
+}
+
+/* Animación de zoom */
+@keyframes zoom-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Estilo para las imágenes que se pueden ampliar */
+.zoomable {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.zoomable:hover {
+    transform: scale(1.05); /* Pequeño efecto de zoom al pasar el ratón */
+}
+
+html {
+    visibility: hidden;
+}
+
+body {
+    visibility: visible;
 }
