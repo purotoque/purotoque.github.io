@@ -20,7 +20,7 @@ header {
 header img {
     max-width: 350px;
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto;
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 1;
     transform: translateY(0);
@@ -57,7 +57,7 @@ nav.sticky{
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: white;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 nav ul {
@@ -70,7 +70,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 2px;
 }
 
 nav ul li a {
@@ -78,7 +78,7 @@ nav ul li a {
     color: #333;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 15px; /* Espaciado interno uniforme */
+    padding: 10px 10px; /* Espaciado interno uniforme */
 }
 
 nav ul li a:hover {
