@@ -57,10 +57,10 @@ nav.sticky{
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: white;
-    transition: all 0.5s ease;
+    transition: all 0.8s ease;
 }
 
-nav ul {
+nav div ul{
     display: flex; /* Cambia a flexbox para una distribución uniforme */
     justify-content: center; /* Espaciado uniforme entre elementos */
     align-items: center; /* Alineación vertical de los elementos */
@@ -69,11 +69,11 @@ nav ul {
     margin: 0;
 }
 
-nav ul li {
+nav div ul li {
     margin: 0 2px;
 }
 
-nav ul li a {
+nav div ul li a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
@@ -81,9 +81,114 @@ nav ul li a {
     padding: 10px 10px; /* Espaciado interno uniforme */
 }
 
-nav ul li a:hover {
+nav div ul li a:hover {
     background-color: #f0f0f0;
     border-radius: 5px;
+}
+
+.menu-container {
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal en ordenadores */
+    gap: 15px;
+}
+
+.menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #dfdfdf;
+    border-radius: 5px;
+}
+
+/* Dropdown menu */
+.menu-item .dropdown-menu {
+    display: none; /* Ocultar inicialmente */
+    position: absolute;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    top: 100%; /* Posicionarlo justo debajo del menú principal */
+    left: 0;
+    z-index: 1000;
+}
+
+.menu-item:hover .dropdown-menu,
+.menu-item:focus-within .dropdown-menu {
+    display: block; /* Mostrar cuando el menú o su contenido estén enfocados o en hover */
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #646363;
+    border-radius: 3px;
+}
+
+/* Botón hamburguesa (solo en móviles) */
+.menu-toggle {
+    display: none; /* Ocultar en pantallas grandes */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Ocultar menú en móviles por defecto */
+        flex-direction: column; /* Mostrar en columna al desplegar */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .menu.show {
+        display: flex; /* Mostrar menú cuando esté abierto */
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar botón hamburguesa */
+    }
+
+    .dropdown-menu {
+        max-height: 50vh; /* Limitar la altura máxima al 50% de la altura visible de la pantalla */
+        overflow-y: auto; /* Agregar scroll vertical si el contenido excede el tamaño */
+        background-color: #444; /* Aseguramos que el fondo del menú sea consistente */
+        scrollbar-width: thin; /* Estilizar el scrollbar para que sea delgado (opcional, solo para navegadores compatibles) */   
+    }
+
+    .menu-item:hover .dropdown-menu {
+        display: none; /* El hover no se aplica en móviles */
+    }
 }
 
 /* Despegable*/
@@ -102,14 +207,13 @@ nav ul li a:hover {
 
 /* Estilo de la lista desplegable (oculta por defecto) */
 .dropdown-menu {
-    display: none;
+    display: none; /* Ocultar inicialmente */
     position: absolute;
-    background-color: #f8f8f8;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0;
-    padding: 0;
+    background-color: #646363;
     list-style: none;
-    top: 100%; /* Ubicación debajo del enlace principal */
+    padding: 10px;
+    margin: 0;
+    top: 100%; /* Posicionarlo justo debajo del menú principal */
     left: 0;
     z-index: 1000;
 }
@@ -136,6 +240,8 @@ nav ul li a:hover {
 .menu-item:hover .dropdown-menu {
     display: block;
 }
+
+
 
 /* Section Styles */
 section {

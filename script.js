@@ -51,3 +51,12 @@ modal.addEventListener('click', (e) => {
         modal.classList.remove('show'); // Oculta el modal si haces clic fuera
     }
 });
+
+// Seleccionar el botón hamburguesa y el menú
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+// Abrir o cerrar el menú al hacer clic en el botón
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
