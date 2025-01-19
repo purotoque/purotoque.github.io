@@ -8,6 +8,11 @@ body {
     padding-top: 0px;
 }
 
+html, body {
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    width: 100%;        /* Asegúrate de que todo ocupa el ancho de la pantalla */
+}
+
 header {
     background-color: #EBE8E5;
     color: #fff;
@@ -245,7 +250,7 @@ nav div ul li a:hover {
 
 /* Section Styles */
 section {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -460,8 +465,8 @@ section h2 {
 
 /* Footer Styles */
 footer {
-    background-color: #5a3e2b;
-    color: #fff;
+    background-color: #EBE8E5;
+    color: #333;
     text-align: center;
     padding: 10px;
     position: relative;
@@ -549,4 +554,35 @@ html {
 
 body {
     visibility: visible;
+}
+
+/* Footer Base Styles */
+footer {
+    background-color: #EBE8E5;
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Logo Section */
+
+#pagos .pagos-iconos {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-left: 860px;
+}
+
+#pagos .pagos-iconos img {
+    width: 40px;
+    height: auto;
+}
+
+/* Copyright Text */
+footer p {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #666;
 }
