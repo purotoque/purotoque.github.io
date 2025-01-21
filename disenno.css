@@ -50,7 +50,7 @@ nav {
     position: relative; /* Relativo por defecto */
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     background: white; /* Fondo del nav para visibilidad */
     transition: all 0.9s ease; /* Suave transición */
 }
@@ -59,7 +59,7 @@ nav.sticky{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: white;
     transition: all 0.8s ease;
@@ -128,7 +128,7 @@ nav div ul li a:hover {
     margin: 0;
     top: 100%; /* Posicionarlo justo debajo del menú principal */
     left: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .menu-item:hover .dropdown-menu,
@@ -168,7 +168,7 @@ nav div ul li a:hover {
         left: 0;
         background-color: #ffffff;
         width: 100%;
-        z-index: 1000;
+        z-index: 10;
     }
 
     .menu.show {
@@ -220,7 +220,7 @@ nav div ul li a:hover {
     margin: 0;
     top: 100%; /* Posicionarlo justo debajo del menú principal */
     left: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 
 /* Estilo de los elementos dentro del menú desplegable */
@@ -486,7 +486,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 10;
     transition: opacity 0.3s ease; /* Transición suave */
 }
 
@@ -519,7 +519,7 @@ footer {
     font-weight: bold;
     color: white;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 10;
 }
 
 .modal .close:hover {
