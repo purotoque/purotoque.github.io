@@ -566,19 +566,6 @@ footer {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Logo Section */
-
-#pagos .pagos-iconos {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espacio entre los iconos */
-}
-
-#pagos .pagos-iconos img {
-    width: 40px;
-    height: auto;
-}
-
 /* Copyright Text */
 footer p {
     font-size: 12px;
