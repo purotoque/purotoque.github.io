@@ -570,9 +570,8 @@ footer {
 
 #pagos .pagos-iconos {
     display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding-left: 860px;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los iconos */
 }
 
 #pagos .pagos-iconos img {
