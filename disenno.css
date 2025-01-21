@@ -32,13 +32,13 @@ header img {
 }
 
 header.hidden {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(-100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 header.scrolled img {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -324,7 +324,7 @@ section h2 {
 
 #social-media .social-icons a:hover img {
     transform: scale(1.2); /* Aumenta tamaño al pasar el mouse */
-    opacity: 0.8;
+    opacity: 1;
 }
 
 /* Redes Sociales 2*/
@@ -353,7 +353,7 @@ section h2 {
 
 #social-media2 .social-icons2 a:hover img {
     transform: scale(1.2); /* Aumenta tamaño al pasar el mouse */
-    opacity: 0.8;
+    opacity: 1;
 }
 
 /* Menú de Equipos */
@@ -476,7 +476,7 @@ footer {
 
 #modal {
     visibility: hidden; /* Inicialmente oculto */
-    opacity: 0; /* Invisibilidad */
+    opacity: 1; /* Invisibilidad */
     position: fixed;
     top: 0;
     left: 0;
