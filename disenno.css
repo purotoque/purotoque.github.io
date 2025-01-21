@@ -52,6 +52,7 @@ nav {
     width: 100%;
     background: white; /* Fondo del nav para visibilidad */
     transition: all 0.9s ease; /* Suave transición */
+    z-index: 1000;
 }
 
 nav.sticky{
@@ -59,6 +60,7 @@ nav.sticky{
     top: 0;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     background: white;
     transition: all 0.8s ease;
 }
@@ -126,6 +128,7 @@ nav div ul li a:hover {
     margin: 0;
     top: 100%; /* Posicionarlo justo debajo del menú principal */
     left: 0;
+    z-index: 1000;
 }
 
 .menu-item:hover .dropdown-menu,
@@ -165,6 +168,7 @@ nav div ul li a:hover {
         left: 0;
         background-color: #ffffff;
         width: 100%;
+        z-index: 1000;
     }
 
     .menu.show {
@@ -216,6 +220,7 @@ nav div ul li a:hover {
     margin: 0;
     top: 100%; /* Posicionarlo justo debajo del menú principal */
     left: 0;
+    z-index: 1000;
 }
 
 /* Estilo de los elementos dentro del menú desplegable */
@@ -482,6 +487,7 @@ footer {
     justify-content: center;
     align-items: center;
     transition: opacity 0.3s ease; /* Transición suave */
+    z-index: 1000;
 }
 
 #modal.show {
@@ -513,6 +519,7 @@ footer {
     font-weight: bold;
     color: white;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .modal .close:hover {
