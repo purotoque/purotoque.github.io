@@ -191,7 +191,9 @@ nav div ul li a:hover {
         scrollbar-width: thin; /* Estilizar el scrollbar para que sea delgado (opcional, solo para navegadores compatibles) */   
     }
 
-    
+    .menu-item:hover .dropdown-menu {
+        display: none; /* El hover no se aplica en móviles */
+    }
 }
 
 /* Despegable*/
