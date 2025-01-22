@@ -185,15 +185,13 @@ nav div ul li a:hover {
     }
 
     .dropdown-menu {
-        max-height: 50vh; /* Limitar la altura máxima al 50% de la altura visible de la pantalla */
+        max-height: 50px; /* Limitar la altura máxima al 50% de la altura visible de la pantalla */
         overflow-y: auto; /* Agregar scroll vertical si el contenido excede el tamaño */
         background-color: #444; /* Aseguramos que el fondo del menú sea consistente */
         scrollbar-width: thin; /* Estilizar el scrollbar para que sea delgado (opcional, solo para navegadores compatibles) */   
     }
 
-    .menu-item:hover .dropdown-menu {
-        display: none; /* El hover no se aplica en móviles */
-    }
+    
 }
 
 /* Despegable*/
